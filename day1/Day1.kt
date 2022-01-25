@@ -13,7 +13,7 @@ import kotlin.collections.ArrayList
 
 fun main() {
     val depthsArray= ArrayList<Int>()
-    val fileHandle = File("day1/depths.txt")
+    val fileHandle = File("day1/depths.txtt")
     var readText: String
 
     var increaseCount = 0

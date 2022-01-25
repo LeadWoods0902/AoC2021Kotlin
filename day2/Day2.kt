@@ -14,14 +14,10 @@ fun main() {
     var verticalDisplacement= 0
 
     fileHandle.forEachLine {
-        if(it.contains("forward")){
-            horizontalDisplacement+= it.split(' ')[1].toInt()
-        }
-        else if (it.contains("down")){
-            verticalDisplacement+= it.split(' ')[1].toInt()
-        }
-        else if(it.contains("up")){
-            verticalDisplacement-= it.split(' ')[1].toInt()
+        when(it.split(' ')[0]){
+            "forward" -> horizontalDisplacement+=it.split(' ')[1].toInt()
+            "down" -> verticalDisplacement+=it.split(' ')[1].toInt()
+            "up" -> verticalDisplacement-=it.split(' ')[1].toInt()
         }
     }
 
