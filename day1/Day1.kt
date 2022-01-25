@@ -11,7 +11,6 @@ package day1
 import java.io.File
 import kotlin.collections.ArrayList
 
-const val TAG = "Day1 |"
 fun main() {
     val depthsArray= ArrayList<Int>()
     val fileHandle = File("day1/depths.txt")
@@ -29,5 +28,5 @@ fun main() {
             increaseCount+= 1
     }
 
-    println("$TAG [${depthsArray[0]}..${depthsArray[depthsArray.size-1]}] (${depthsArray.size} terms) has $increaseCount positive depth changes.\n")
+    println("DAY1 | [${depthsArray[0]}..${depthsArray[depthsArray.size-1]}] (${depthsArray.size} terms) has $increaseCount positive depth changes.\n")
 }
