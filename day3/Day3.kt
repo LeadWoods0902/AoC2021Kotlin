@@ -7,6 +7,11 @@ package day3
  *  Created by:       ledwa
  *  Started on:       2022-01-25
  *  Most Recent Edit: 2022-01-27
+ *
+ *  Purpose:  read through a file, converting
+ *  binary numbers into Gamma & epsilon values,
+ *  using the greatest occurrence to determine
+ *  bit value by index
  */
 
 import java.io.File
