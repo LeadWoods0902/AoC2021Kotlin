@@ -1,10 +1,12 @@
 package day3
 
 /*
- *  Day3.kt
- *  AoC2021Kotlin
+ *  File:    Day3
+ *  Project: AoC2021Kotlin
  *
- *  Created by Louis Edwards on 2022-01-25
+ *  Created by:       ledwa
+ *  Started on:       2022-01-25
+ *  Most Recent Edit: 2022-01-27
  */
 
 import java.io.File

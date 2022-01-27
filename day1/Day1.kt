@@ -1,10 +1,16 @@
 package day1
 
 /*
- *  Day1.kt
- *  AoC2021Kotlin
+ *  File:    Day1
+ *  Project: AoC2021Kotlin
  *
- *  Created by Louis Edwards on 2022-01-25
+ *  Created by:       ledwa
+ *  Started on:       2022-01-25
+ *  Most Recent Edit: 2022-01-27
+ *
+ *  Purpose: Read through a file, counting the
+ *  number of increments between two adjacent
+ *  values: arr[i] < arr[i+1].
  */
 
 
