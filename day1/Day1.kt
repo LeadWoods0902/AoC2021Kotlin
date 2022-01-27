@@ -19,16 +19,18 @@ import kotlin.collections.ArrayList
 
 fun main() {
     val depthsArray = ArrayList<Int>()
-    val fileHandle = File("day1/depths.txtt")
+    val fileHandle = File("day1/depths.txt")
     var readText: String
 
     var increaseCount = 0
 
+    /*add each line of the file into an array as an integer value*/
     fileHandle.forEachLine {
         readText = it
         depthsArray.add(readText.toInt())
     }
 
+    /*iterate through the n-1 elements after element 1, comparing to the previous element to determine difference*/
     for (i in 1 until depthsArray.size) {
         if (depthsArray[i] > depthsArray[i - 1])
             increaseCount += 1

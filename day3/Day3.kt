@@ -10,14 +10,20 @@ package day3
  */
 
 import java.io.File
-import java.lang.Math.pow
+import kotlin.math.pow
+import kotlin.system.exitProcess
 
 
+/*convert an array of ints into binary*/
 fun toBinary(value: ArrayList<Int>): String {
 
     val binaryString = buildString {
         for (i in 0 until 12)
-            this.append(value[i])
+            if((0..1).contains(value[i]))
+                this.append(value[i])
+            else{
+                return "-1"
+            }
     }
     return binaryString
 }
@@ -28,9 +34,11 @@ fun binaryToInt(value: String): Int {
     var j = 11
     while (i <= 2048) {
         when (value[j--]) {
-            '1' -> denaryNumber += i
+            '1'  -> {denaryNumber += i; i*=2}
+            '0'  -> i*=2
+            else -> return -4096
+
         }
-        i *= 2
     }
     return denaryNumber
 }
@@ -53,13 +61,17 @@ fun main() {
         var binaryPair = Pair(0, 0) /*occurrences of 1, occurrences of 0*/
 
         for (j in 0 until binaryArray.size) { /* for every binary number in the file*/
-            when (binaryArray[j][i]) {
-                '1' -> binaryPair = binaryPair.copy(first = binaryPair.first + 1)
-                '0' -> binaryPair = binaryPair.copy(second = binaryPair.second + 1)
+            binaryPair= when(binaryArray[j][i]) {
+                '1'-> binaryPair.copy(first = binaryPair.first + 1)
+                '0'-> binaryPair.copy(second = binaryPair.second + 1)
+                else -> {
+                    binaryPair.copy()
+                    exitProcess(-1)
+                }
             }
 
         }
-        val position: Int = pow(2.00, (11 - i).toDouble()).toInt()
+        val position: Int = 2.00.pow((11 - i).toDouble()).toInt()
         println("totals for position $position: ${binaryPair.first}, ${binaryPair.second}")
 
         if (binaryPair.first > binaryPair.second) {
@@ -73,6 +85,11 @@ fun main() {
 
     val gammaString: String = toBinary(gamma)
     val epsilonString: String = toBinary(epsilon)
+    if(gammaString == "-1" || epsilonString== "-1"){
+        println("ERROR| Invalid binary passed to binary converter")
+        exitProcess(-1)
+    }
+
     val solutionValue: Int = binaryToInt(gammaString) * binaryToInt(epsilonString)
 
     println("DAY3 | Gamma: $gammaString, ${binaryToInt(gammaString)}")
