@@ -4,7 +4,7 @@ package day3
  *  File:    Day3
  *  Project: AoC2021Kotlin
  *
- *  Created by:       ledwa
+ *  Created by:       TheLeadenWoods (Louis Edwards)
  *  Started on:       2022-01-25
  *  Most Recent Edit: 2022-01-27
  *

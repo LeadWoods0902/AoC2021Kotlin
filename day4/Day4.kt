@@ -4,7 +4,7 @@ package day4
  *  File:    Day4
  *  Project: AoC2021Kotlin
  *
- *  Created by:       ledwa
+ *  Created by:       TheLeadenWoods (Louis Edwards)
  *  Started on:       2022-01-27
  *  Most Recent Edit: 2022-01-27
  *
@@ -17,7 +17,6 @@ import kotlin.system.exitProcess
 
 class BingoBoard {
     var boardValues = ArrayList<Int>()
-
 
     /*used in testing*/
     override fun toString(): String {
