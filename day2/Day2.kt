@@ -6,7 +6,7 @@ package day2
  *
  *  Created by:       TheLeadenWoods (Louis Edwards)
  *  Started on:       2022-01-25
- *  Most Recent Edit: 2022-01-27
+ *  Most Recent Edit: 2022-01-28
  *
  *  Purpose: read through a file, "translating"
  *  commands into vertical and horizontal 
@@ -40,4 +40,5 @@ fun main() {
     println("DAY2 | the sub displaced: ${displacementVH.first} horizontally and ${displacementVH.second} " +
             "vertically, totalling: ${displacementVH.first * displacementVH.second}")
 }
+
 

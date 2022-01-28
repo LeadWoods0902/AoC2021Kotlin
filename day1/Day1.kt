@@ -6,7 +6,7 @@ package day1
  *
  *  Created by:       TheLeadenWoods (Louis Edwards)
  *  Started on:       2022-01-25
- *  Most Recent Edit: 2022-01-27
+ *  Most Recent Edit: 2022-01-28
  *
  *  Purpose: Read through a file, counting the
  *  number of increments between two adjacent
@@ -20,14 +20,11 @@ import kotlin.collections.ArrayList
 fun main() {
     val depthsArray = ArrayList<Int>()
     val fileHandle = File("day1/depths.txt")
-    var readText: String
-
     var increaseCount = 0
 
     /*add each line of the file into an array as an integer value*/
     fileHandle.forEachLine {
-        readText = it
-        depthsArray.add(readText.toInt())
+        depthsArray.add(it.toInt())
     }
 
     /*iterate through the n-1 elements after element 1, comparing to the previous element to determine difference*/
