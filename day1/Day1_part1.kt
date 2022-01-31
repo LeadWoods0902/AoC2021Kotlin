@@ -1,7 +1,7 @@
 package day1
 
 /*
- *  File:    Day1
+ *  File:    Day1_Part1
  *  Project: AoC2021Kotlin
  *
  *  Created by:       TheLeadenWoods (Louis Edwards)
